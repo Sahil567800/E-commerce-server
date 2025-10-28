@@ -8,7 +8,7 @@ import orderRouter from './routes/orderRoute.js'
 
 //App config
 const app = express()
-const port = 3000
+const port = process.env.PORT || 3000
 dotenv.config()
 connectDb()
 
