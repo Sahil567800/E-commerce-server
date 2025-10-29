@@ -5,7 +5,7 @@ const orderSchema = new mongoose.Schema({
     items: { type: Array, required: true },
     quantity: { type: Number, required: true, min: 1 },
     totalPrice: { type: Number, required: true },
-    status: { type: String, enum: ["pending", "shipped", "delivered", "cancelled"], default: "shipped" },
+    status: { type: String, enum: ["pending", "shipped", "delivered", "cancelled"], default: "ordered" },
     shippingAddress: { type: Object, required: true },
     paymentMethod: { type: String, enum: ["Razorpay", "Stripe", "COD"], required: true },
     date: { type: Date, default: Date.now },
